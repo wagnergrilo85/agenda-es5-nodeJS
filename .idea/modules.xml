@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../nodeJS/api-v1-agenda/.idea/api-v1-agenda.iml" filepath="$PROJECT_DIR$/../../nodeJS/api-v1-agenda/.idea/api-v1-agenda.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/phone-book.iml" filepath="$PROJECT_DIR$/.idea/phone-book.iml" />
+    </modules>
+  </component>
+</project>

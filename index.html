@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agenda telefonica</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="container-fluid" id = "header">
+        <div class="container">
+            <h1>Sistema de agenda telefônica</h1>
+        </div>
+    </header>
+
+    <div class="container-fluid" id="box-cadastro">
+        <main class="container" id = "main">
+            <div class="row">
+
+                <form id = "form">
+
+                    <ul id="mensagem-erros"></ul>
+
+                    <input type="hidden" name = "id" id = "id">
+
+                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                        <div class="form-group">
+                            <label for="nome">Nome:</label>
+                            <input type="text" class="form-control" name = "nome" id="nome" placeholder="Informe o nome completo">
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                        <div class="form-group">
+                            <label for="tipo-telefone">Tipo do telefone:</label>
+                            <select class="form-control" name="tipoTelefone" id="tipo-telefone">
+                                <option value="Celular">Celular</option>
+                                <option value="Telefone">Telefone</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                        <div class="form-group">
+                            <label for="operadora">Operadora:</label>
+                            <select class="form-control" name="operadora" id="operadora">
+                                <option value="Oi">Oi</option>
+                                <option value="Vivo">Vivo</option>
+                                <option value="Claro">Claro</option>
+                                <option value="Tim">Tim</option>
+                                <option value="Nextel">Nextel</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                        <div class="form-group">
+                            <label for="telefone">Telefone:</label>
+                            <input type="text" class="form-control" name = "telefone" id="telefone" placeholder="Informe o telefone">
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <button type="submit" id="botao-cadastrar" class="btn btn-success">Cadastrar</button>
+                        <button type="button" id="botao-editar" class="btn btn-warning disabled">Editar</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </main>
+    </div>
+
+    <div class="clerafix"></div>
+
+    <section class="container" id = "box-table">
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <span>Agenda de contatos </span>
+                        <span class="pull-right">
+                            <input type="text" class="form-control" name="filtrar" id = "filtrar-tabela" placeholder="Pesquisar contato">
+                        </span>
+
+                    </div>
+                    <table class="table table-bordered" >
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Telefone</th>
+                            <th>Tipo</th>
+                            <th>Operadora</th>
+                        </tr>
+                        </thead>
+                        <tbody id = "tabela-contatos">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="container">
+        <hr>
+        Criado por Wagner Grilo de Barros Júnior
+        <br> Wagner.grilo85@gmail.com
+        <br> <a href="https://github.com/wagnergrilo85" target="_blank"> <i class="fa fa-github" aria-hidden="true"></i> github</a>
+        <a href="https://www.linkedin.com/in/wagner-grilo-de-barros-j%C3%BAnior-735b39102/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i> linkedin</a>
+        <p>&copy; 2017 -  Todos os direitos reservados.<p>
+    </footer>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/servidor.js"></script>
+<script src="js/regex.js"></script>
+<script src="js/filtro.js"></script>
+<script src="js/carregar-contato.js"></script>
+<script src="js/crud-contato-servidor.js"></script>
+<script src="js/validar-formulario.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
